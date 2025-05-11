@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Karthi Palaniappan | Photography</title>
-  </head>
 
-  <body class="home">
-    
-    <!-- Fixed Navigation -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Karthi Palaniappan | Photography</title>
+</head>
+
+<body class="home">
+
+  <!-- Fixed Navigation -->
   <nav class="navbar">
     <div class="nav__logo">
       <a href="index.html">
@@ -36,24 +31,26 @@
     </ul>
   </nav>
 
-    <!-- Header Image for Home Page -->
+  <!-- Header Image for Home Page -->
   <div class="header-image"></div>
 
-  
+
 
   <main>
     <div class="section__container about__container" id="about">
       <h2 class="section__header">WHERE ART MEETS PRECISION</h2>
       <p class="section__description">
-        What happens when an artistic mind graduates as a computer science engineer and falls in love with photography? 
-        You get someone like me — <strong>Karthi Palaniappan</strong>, an advertising photographer with a unique blend 
+        What happens when an artistic mind graduates as a computer science engineer and falls in love with photography?
+        You get someone like me — <strong>Karthi Palaniappan</strong>, an advertising photographer with a unique blend
         of technical insight and creative vision.
       </p>
       <p class="section__description">
-        With over <strong>6 years of professional experience</strong>, I specialize in product, food, fashion, and 
-         architecture photography. My work fuses precision with storytelling to create impactful visuals. I've collaborated 
-        with leading brands like <strong>Sowbaghya</strong>, <strong>Gopuram Manjal and Kumkum</strong>, and 
-         <strong>Indus Life Sciences</strong>, delivering imagery that connects brands with their audiences in meaningful ways.
+        With over <strong>6 years of professional experience</strong>, I specialize in product, food, fashion, and
+        architecture photography. My work fuses precision with storytelling to create impactful visuals. I've
+        collaborated
+        with leading brands like <strong>Sowbaghya</strong>, <strong>Gopuram Manjal and Kumkum</strong>, and
+        <strong>Indus Life Sciences</strong>, delivering imagery that connects brands with their audiences in meaningful
+        ways.
       </p>
       <img src="assets/karthi-palaniappan-logo-black.png" alt="logo" />
     </div>
@@ -86,9 +83,9 @@
       <div class="section__container service__container">
         <h2 class="section__header">SERVICES</h2>
         <p class="section__description">
-          I offer a range of professional visual solutions designed to elevate 
-          brands and businesses. With expertise in product, food, fashion, and 
-          architecture photography, my focus is on delivering images that are 
+          I offer a range of professional visual solutions designed to elevate
+          brands and businesses. With expertise in product, food, fashion, and
+          architecture photography, my focus is on delivering images that are
           both creatively striking and commercially effective.
         </p>
         <div class="service__grid">
@@ -102,7 +99,7 @@
           <div class="service__card">
             <h4>Product Shoots</h4>
             <p>
-              Showcase the look and feel of your products with professional 
+              Showcase the look and feel of your products with professional
               photography designed to enhance your brand and grow your business.
             </p>
           </div>
@@ -110,7 +107,7 @@
             <h4>Fashion Shoots</h4>
             <p>
               Celebrate style and personality with our custom fashion shoots,
-               capturing bold, elegant, and candid moments.
+              capturing bold, elegant, and candid moments.
             </p>
           </div>
         </div>
@@ -221,7 +218,7 @@
       </div>
     </section>
 
-    
+
     <footer>
       </div>
       <div class="footer__bar">
@@ -229,10 +226,12 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+  </main>
+</body>
+<script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
-    
+
     <script>
       const header = document.querySelector('.header-image');
       const images = [
@@ -240,24 +239,22 @@
         'assets/header-2.jpg',
         'assets/header-3.jpg',
       ];
-    
+
       let current = 0;
-    
+
       function changeBackground() {
         header.style.backgroundImage = `url('${images[current]}')`;
         current = (current + 1) % images.length;
       }
-    
+
       // Set the first image and loop every 5 seconds
       changeBackground();
       setInterval(changeBackground, 5000);
     </script>
 
     <script>
-    document.getElementById("menu-btn").addEventListener("click", function () {
-    document.getElementById("nav-links").classList.toggle("active");
-    });
+      document.getElementById("menu-btn").addEventListener("click", function () {
+        document.getElementById("nav-links").classList.toggle("active");
+      });
     </script>
-  </main>
-  </body>
 </html>
