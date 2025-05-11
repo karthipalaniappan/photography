@@ -157,8 +157,16 @@ body {
 }
 
 
+/* === Content wrapper adjustment to avoid nav overlap === */
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply space below fixed navbar */
+main {
+  padding-top: 80px; /* equal to .navbar height */
 }
 
 .contact-section {
@@ -220,25 +228,56 @@ body {
 /* Added above code for contact form styling */
 
 
-.header {
-  /*min-height: 600px;*/ /* header or background images fills only half of the screen so commented out */
-  height: 100vh;
-  background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
-    url("assets/header-1.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out; /* Newely added */
+/* Inner pages: black bg */
+body.inner .header {
+  /* background-color: black; */
+  background-image: none;
 }
 
-nav {
+/* Full-screen header image only on homepage */
+body.home .header-image {
+  background: url('assets/header-1.jpg') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+/* Hide header image on inner pages */
+body.inner .header-image {
+  display: none;
+}
+
+body.inner .header-bg-image {
+  display: none;
+}
+
+
+
+/* Other Pages – Solid Black */
+body.inner .header {
+  background-color: black;
+  background-image: none;
+}
+
+
+/* Sticky black nav bar */
+.navbar {
   position: fixed;
-  isolation: isolate;
   top: 0;
+  left: 0;
   width: 100%;
-  max-width: var(--max-width);
-  margin: auto;
-  z-index: 9;
+  height: 80px; /* ✅ This is critical */
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+body.home .navbar {
+  background-color: transparent;
 }
 
 .nav__header {
@@ -250,29 +289,33 @@ nav {
   background-color: var(--text-dark);
 }
 
+/* Logo */
 .nav__logo img {
-  max-width: 70px;
+  height: 50px;
 }
 
+/* Hamburger for mobile */
 .nav__menu__btn {
-  font-size: 1.5rem;
-  color: var(--white);
+  display: none;
+  font-size: 2rem;
+  color: white;
   cursor: pointer;
 }
 
+/* Navigation links */
 .nav__links {
   list-style: none;
-  position: absolute;
-  width: 100%;
-  padding: 2rem;
   display: flex;
-  align-items: center;
-  flex-direction: column;
   gap: 2rem;
-  background-color: var(--text-dark);
-  transform: translateY(-100%);
-  transition: 0.5s;
-  z-index: -1;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav__links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  display: block;
 }
 
 .nav__links.open {
@@ -640,15 +683,6 @@ nav {
     min-height: 650px;
   }
 
-  nav {
-    padding: 2rem 1rem;
-    position: static;
-    max-width: 900px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   .nav__header {
     display: none;
   }
@@ -670,6 +704,46 @@ nav {
   .nav__links .nav__logo img {
     max-width: 250px;
   }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .about-column-1,
+  .about-column-2 {
+    flex: 1 1 50%;
+  }
+
+  .about-column-1 img {
+    width: 100%;
+    max-width: 100%;  /* allow it to fill the column */
+    height: auto;
+    display: block;
+    margin: 0;         /* remove auto-centering */
+  }
+
+  @media (min-width: 768px) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+  }
+
+  .about-column-2 {
+    padding-left: 1rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+
+
 
   .portfolio__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -714,4 +788,42 @@ nav {
   .portfolio__grid {
     gap: 2rem;
   }
+}
+
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    background: black;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav__links.active {
+    display: flex;
+  }
+
+  .nav__menu__btn {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .navbar {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 767px) {
+    body.home .navbar {
+      background-color: black;
+    }
+  }
+
+  
 }

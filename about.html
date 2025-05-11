@@ -1,7 +1,7 @@
 <!-- about.html -->
 <!DOCTYPE html>
 <html lang="en"></html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -14,50 +14,70 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Karthi Palaniappan | Photography</title>
-  </head>
-  <body>
-    <header class="about" >
-        <nav>
-          <div class="nav__header">
-            <div class="nav__logo">
-              <a href="#">
-                <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
-              </a>
-            </div>
-            <div class="nav__menu__btn" id="menu-btn">
-              <i class="ri-menu-line"></i>
-            </div>
-          </div>
-          <ul class="nav__links" id="nav-links">
-            <li class="nav__logo">
-              <a href="#">
-                <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
-              </a>
-            </li>
-            <!--<li><a href="#home">FASHION</a></li>-->
-            <li><a href="#fashion">FASHION</a></li>
-            <li><a href="#product">PRODUCT</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#blog">BLOG</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="section__container about__container" id="about">
-        <h2 class="section__header">Passionate Photographer & Visual Storyteller</h2>
-        <p class="section__description">
-          What happens when an artistic mind graduates as a computer science engineer and falls in love with photography? 
-          You get someone like me — <strong>Karthi Palaniappan</strong>, an advertising photographer with a unique blend 
-          of technical insight and creative vision.
-        </p>
-        <p class="section__description">
-          With over <strong>6 years of professional experience</strong>, I specialize in product, food, fashion, and 
-           architecture photography. My work fuses precision with storytelling to create impactful visuals. I've collaborated 
-          with leading brands like <strong>Sowbaghya</strong>, <strong>Gopuram Manjal and Kumkum</strong>, and 
-           <strong>Indus Life Sciences</strong>, delivering imagery that connects brands with their audiences in meaningful ways.
-        </p>
-        <img src="assets/karthi-palaniappan-logo-black.png" alt="logo" />
-      </div>
 
+  </head>
+
+  <body class="inner">
+
+    <!-- Inject header here -->
+    <div id="site-header"></div>
+
+
+    <!-- Fixed Navigation -->
+    <nav class="navbar">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
+        </a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="fashion.html">FASHION</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="index.html#blog">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="about-column-1">
+            <img src="assets/karthi-palaniappan-professional-photographer-chennai.jpg" alt="">
+          </div>
+          <div class="about-column-2">
+            <p>I'm Karthi Palaniappan, a professional advertising and commercial photographer
+               with a passion for creating bold, refined, and impactful visuals. With a 
+               background in engineering and over 6 years of experience behind the lens, 
+               I blend technical precision with creative storytelling to craft images 
+               that not only look beautiful but also drive results.
+            </p>
+            <p>
+              My work specializes in product, fashion, food, and architecture photography, 
+              helping brands build identity, connect with their audiences, and stand out 
+              in a crowded marketplace. Every project I take on is approached with a deep 
+              understanding of brand voice, visual strategy, and attention to detail — 
+              because in advertising, every pixel matters.
+            </p>
+
+            <p>
+              I've had the privilege of working with established brands like Sowbaghya, 
+              Gopuram Manjal & Kumkum, and Indus Life Sciences, delivering high-quality 
+              content that enhances brand presence and consumer engagement across platforms.
+            </p>
+
+            <p>
+              Whether it’s a high-concept commercial campaign, a sleek product shoot, 
+              or an editorial fashion series, I approach every frame as an opportunity 
+              to elevate the ordinary into something extraordinary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
   </body>
 </html>
