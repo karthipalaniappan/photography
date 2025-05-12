@@ -404,7 +404,7 @@ body.home .navbar {
 }
 
 .portfolio__card:nth-child(1)::after {
-  content: "Portraits";
+  content: "Fashion";
 }
 
 .portfolio__card:nth-child(2)::after {
@@ -412,7 +412,7 @@ body.home .navbar {
 }
 
 .portfolio__card:nth-child(3)::after {
-  content: "Fashion";
+  content: "Portraits";
 }
 
 .portfolio__content {
@@ -432,6 +432,11 @@ body.home .navbar {
 
 .portfolio__card:hover .portfolio__content {
   opacity: 1;
+}
+
+.portfolio__link {
+  display: block;
+  position: relative;
 }
 
 .service {
