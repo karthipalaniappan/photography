@@ -18,12 +18,12 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .section__header {
-  margin-top: 100px;
-  margin-bottom: 2rem;
+  /* margin-top: 100px; */
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 400;
   font-family: var(--header-font);
@@ -193,6 +193,7 @@ body {
 main {
   flex: 1 0 auto;
   padding-top: 80px;
+  /*padding-bottom: 60px;*/
 }
 
 .contact-section {
@@ -680,12 +681,13 @@ body.home .navbar {
 }
 
 .footer__bar {
+  height: 60px; /* or whatever height suits your footer */
   padding: 1rem;
   font-size: 0.9rem;
   color: var(--extra-light);
   background-color: var(--text-dark);
   text-align: center;
-  position: fixed;
+  /*position: fixed;*/
   bottom: 0;
   left: 0;
   width: 100%;
@@ -780,13 +782,6 @@ body.home .navbar {
   }
 
 
-  /* Blog */
-  .blog__container {
-    width: 85%;
-    height: 350px;
-    margin: 0px auto;
-  }
-
 
   .portfolio__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -853,21 +848,6 @@ body.home .navbar {
 
   .nav__menu__btn {
     display: block;
-  }
-
-  @media (min-width: 768px) {
-    .navbar {
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      justify-content: space-between;
-    }
-  }
-
-  @media (max-width: 767px) {
-    body.home .navbar {
-      background-color: black;
-    }
   }
 }
 

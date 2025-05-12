@@ -50,7 +50,6 @@
         <strong>Indus Life Sciences</strong>, delivering imagery that connects brands with their audiences in meaningful
         ways.
       </p>
-      <img src="assets/karthi-palaniappan-logo-black.png" alt="logo" />
     </div>
 
     <div class="section__container portfolio__container">
@@ -224,34 +223,37 @@
     </footer>
 
   </main>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+
+  <script>
+    const header = document.querySelector('.header-image');
+    const images = [
+      'assets/header-1.jpg',
+      'assets/header-2.jpg',
+      'assets/header-3.jpg',
+    ];
+
+    let current = 0;
+
+    function changeBackground() {
+      header.style.backgroundImage = `url('${images[current]}')`;
+      current = (current + 1) % images.length;
+    }
+
+    // Set the first image and loop every 5 seconds
+    changeBackground();
+    setInterval(changeBackground, 5000);
+  </script>
+
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
+  </script>
+
 </body>
-<script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
 
-    <script>
-      const header = document.querySelector('.header-image');
-      const images = [
-        'assets/header-1.jpg',
-        'assets/header-2.jpg',
-        'assets/header-3.jpg',
-      ];
-
-      let current = 0;
-
-      function changeBackground() {
-        header.style.backgroundImage = `url('${images[current]}')`;
-        current = (current + 1) % images.length;
-      }
-
-      // Set the first image and loop every 5 seconds
-      changeBackground();
-      setInterval(changeBackground, 5000);
-    </script>
-
-    <script>
-      document.getElementById("menu-btn").addEventListener("click", function () {
-        document.getElementById("nav-links").classList.toggle("active");
-      });
-    </script>
 </html>
