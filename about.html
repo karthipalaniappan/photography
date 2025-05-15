@@ -2,16 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-</html>
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css" />
-  <title>Karthi Palaniappan | Photography</title>
-
+  <title>About - Karthi Palaniappan</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 </head>
 
 <body class="inner">
@@ -22,15 +20,25 @@
 
   <!-- Fixed Navigation -->
   <nav class="navbar">
-    <div class="nav__logo">
+    <!-- ✅ Mobile logo centered -->
+    <div class="nav__mobile__logo">
       <a href="index.html">
         <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
       </a>
     </div>
+  
+    <!-- ✅ Hamburger menu on the right -->
     <div class="nav__menu__btn" id="menu-btn">
       <i class="ri-menu-line"></i>
     </div>
+  
+    <!-- ✅ Full nav with logo before 'FASHION' for desktop -->
     <ul class="nav__links" id="nav-links">
+      <li class="nav__logo__inline">
+        <a href="index.html" class="logo">
+          <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
+        </a>
+      </li>
       <li><a href="fashion.html">FASHION</a></li>
       <li><a href="product.html">PRODUCT</a></li>
       <li><a href="about.html">ABOUT</a></li>

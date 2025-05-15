@@ -23,6 +23,9 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
+
+/* Below section impacts Nav hamburger button opening and closing */
+
 ScrollReveal().reveal(".about__container .section__header", {
   ...scrollRevealOption,
 });
@@ -80,8 +83,44 @@ Array.from(instagram.children).forEach((item) => {
   instagram.appendChild(duplicateNode);
 });
 
+/* Above section impacts Nav hamburger button opening and closing */
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("menu-btn").addEventListener("click", () => {
-    document.getElementById("nav-links").classList.toggle("active");
-  });
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+  const menuIcon = document.getElementById("menu-icon");
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuBtn.classList.toggle("open");
+
+      // Swap icons
+      if (menuBtn.classList.contains("open")) {
+        menuIcon.classList.remove("ri-menu-line");
+        menuIcon.classList.add("ri-close-line");
+      } else {
+        menuIcon.classList.remove("ri-close-line");
+        menuIcon.classList.add("ri-menu-line");
+      }
+    });
+  }
+
+  const navbar = document.querySelector(".navbar");
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  }
 });
+
+
+
+
+
+
