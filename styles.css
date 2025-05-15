@@ -44,8 +44,8 @@
   font-family: var(--header-font);
   color: var(--text-dark);
   text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  /*margin-top: 3rem;
+  margin-bottom: 3rem;*/
 }
 
 .about__description {
@@ -252,6 +252,36 @@ main {
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+.contact-form label {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+
+.contact-links p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #333;
+}
+
+.contact-links img.icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
 
 /* Added above code for contact form styling */
 
@@ -818,7 +848,31 @@ body.home .navbar {
   }
 }
 
-@media (width > 768px) {
+/* About page image alignment */
+/* Base (mobile-first) layout */
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-column-1,
+.about-column-2 {
+  padding: 1rem;
+}
+
+/* Add margin to image on mobile */
+.about-column-1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* margin-bottom: 1rem; */
+  pointer-events: none;
+}
+
+
+
+@media screen and (min-width: 768px) {
   .header {
     min-height: 650px;
   }
@@ -855,22 +909,19 @@ body.home .navbar {
   }
 
   .about-column-1 img {
-    width: 100%;
-    height: auto;
-    display: block;
+    margin-bottom: 0;
   }
 
   .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-direction: row;
     align-items: flex-start;
+    /* gap: 2rem; */
   }
 
 
   .about-column-2 {
     width: 60%;
-    min-height: 100%;
+    margin-top: 2rem;
   }
 
   .container {
@@ -925,6 +976,23 @@ body.home .navbar {
     gap: 2rem;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .row {
+    flex-direction: column; /* Stack image on top, text below */
+    align-items: center;
+  }
+
+  .about-column-1 img {
+    /*margin-bottom: 1.5rem;  Add spacing below image */
+    padding: 2rem;         /* Optional: adds spacing inside image container */
+  }
+
+  .about-column-2 {
+    width: 100%; /* Make sure text takes full width below the image */
+  }
+}
+
 
 /* ✅ Mobile media query */
 @media (max-width: 768px) {
@@ -1116,10 +1184,22 @@ body.home .navbar {
 
   .blog-post {
     padding: 0.5rem;
+    flex-direction: column; /* ✅ Stack image and text */
+    align-items: flex-start;
   }
 
   .blog-post img {
-    height: 300px;
+    width: 100% !important;   /* ✅ Override the default 450px width */
+    height: auto;
+    max-width: 100%;
+  }
+
+  .blog-post-content {
+    width: 100%;
+  }
+
+  html, body {
+    overflow-x: hidden; /* ✅ Prevents side scroll */
   }
 }
 
