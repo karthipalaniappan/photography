@@ -117,6 +117,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const grid = document.querySelector('.gallery');
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: 0
+      });
+    });
+  });
+
+
+
 });
 
 
