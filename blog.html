@@ -1,128 +1,206 @@
+<!-- blog.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Blog - Karthi Palaniappan</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2" />
-  </head>
 
-  <body class="inner">
+<head>
 
-    <!-- Inject header here -->
-    <div id="site-header"></div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Photography Blog – Portrait, Fashion, Product and Food Shoots | Karthi Palaniappan</title>
 
-    <!-- Fixed Navigation -->
-    <nav class="navbar">
-      <!-- ✅ Mobile logo centered -->
-      <div class="nav__mobile__logo">
-        <a href="index.html">
+  <meta name="description"
+    content="Explore Karthi Palaniappan’s professional photography blog featuring behind-the-scenes stories and tips on portrait, fashion, product and food photography in Chennai, India." />
+  <meta name="keywords"
+    content="product photography Chennai, jewellery photographer Chennai, food photography Tamil Nadu, advertising photographer Chennai, health care product photography, cosmetics photography, Karthi Palaniappan" />
+  <meta name="author" content="Karthi Palaniappan" />
+  <link rel="canonical" href="https://karthipalaniappan.photography/blog.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"
+    content="Professional photographer Karthi Palaniappan’s blog featuring behind-the-scenes, stories and tips on portrait, fashion, product and food photography in Chennai, India." />
+  <meta property="og:description"
+    content="Professional photographer Karthi Palaniappan’s blog featuring behind-the-scenes, stories and tips on portrait, fashion, product and food photography in Chennai, India." />
+  <meta property="og:image"
+    content="https://karthipalaniappan.photography/assets/medical-product-photography-chennai-karthi-palaniappan.jpg" />
+  <meta property="og:url" content="https://karthipalaniappan.photography/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="article:published_time" content="2025-05-30" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="Professional photographer Karthi Palaniappan’s blog featuring behind-the-scenes, stories and tips on portrait, fashion, product and food photography in Chennai, India." />
+  <meta name="twitter:description"
+    content="Professional photographer Karthi Palaniappan’s blog featuring behind-the-scenes, stories and tips on portrait, fashion, product and food photography in Chennai, India." />
+  <meta name="twitter:image"
+    content="https://karthipalaniappan.photography/assets/medical-product-photography-chennai-karthi-palaniappan.jpg" />
+
+  <!-- Remix Icon + Swiper + Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Exploring Indoor and Outdoor Portraits in the Chennai Summer",
+      "image": "https://karthipalaniappan.photography/assets/blog/blog-1/hima-bindhu-portrait-shoot-chennai-karthi-palaniappan.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Karthi Palaniappan"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "India"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Karthi Palaniappan",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://karthipalaniappan.photography/assets/karthi-palaniappan-professional-photographer-chennai-india.jpg"
+        }
+      },
+      "sameAs": [
+        "https://instagram.com/karthipalaniappan.photography/"
+      ],
+      "datePublished": "2025-05-30",
+      "description": "Professional photographer Karthi Palaniappan’s blog featuring behind-the-scenes, stories and tips on portrait, fashion, product and food photography in Chennai, India."
+    }
+    </script>
+    
+
+</head>
+
+<body class="inner">
+
+  <!-- Inject header here -->
+  <div id="site-header"></div>
+
+  <!-- Fixed Navigation -->
+  <nav class="navbar">
+    <!-- ✅ Mobile logo centered -->
+    <div class="nav__mobile__logo">
+      <a href="index.html">
+        <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
+      </a>
+    </div>
+
+    <!-- ✅ Hamburger menu on the right -->
+    <div class="nav__menu__btn" id="menu-btn">
+      <i class="ri-menu-line"></i>
+    </div>
+
+    <!-- ✅ Full nav with logo before 'FASHION' for desktop -->
+    <ul class="nav__links" id="nav-links">
+      <li class="nav__logo__inline">
+        <a href="index.html" class="logo">
           <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
         </a>
-      </div>
-    
-      <!-- ✅ Hamburger menu on the right -->
-      <div class="nav__menu__btn" id="menu-btn">
-        <i class="ri-menu-line"></i>
-      </div>
-    
-      <!-- ✅ Full nav with logo before 'FASHION' for desktop -->
-      <ul class="nav__links" id="nav-links">
-        <li class="nav__logo__inline">
-          <a href="index.html" class="logo">
-            <img src="assets/karthi-palaniappan-logo-white.png" alt="logo" />
-          </a>
-        </li>
-        <li><a href="fashion.html">FASHION</a></li>
-        <li><a href="product.html">PRODUCT</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="blog.html">BLOG</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
+      </li>
+      <li><a href="fashion.html">FASHION</a></li>
+      <li><a href="product.html">PRODUCT</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="blog.html">BLOG</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
-    <main>
-      <div class="section__header">
-        <div class="container">
-          <h2> Recent Blogs</h2>
+  <main>
+    <div class="section__header">
+      <div class="container">
+        <h2> Recent Blogs</h2>
+      </div>
+    </div>
+
+    <div class="blog-container">
+      <div class="blog-section-header">The Latest Posts</div>
+      <div class="blog-section-subtitle">Resources to style, compose, light, and edit food photography like a pro.</div>
+
+
+      <a href="blog-3.html" class="blog-post-link">
+        <div class="blog-post">
+          <img src="assets/blog/blog-3/designer-polki-jewellery-photography-chennai-karthi-palaniappan.jpg"
+            alt="Jewellery photo shoot behind the scenes – shot by professional jewellery photographer Karthi Palaniappan in Chennai, India">
+          <div class="blog-post-content">
+            <div class="blog-post-date">June 13, 2025</div>
+            <div class="blog-post-title">
+              Jewellery Photography – Behind the Scenes Product Styling
+            </div>
+            <div class="blog-post-description">
+              As a commercial product photographer based in Tamil Nadu, I focus on creating visuals that highlight a
+              piece’s elegance and detail.
+            </div>
+            <span class="blog-read-more">Keep Reading</span>
+          </div>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-container">
-        <div class="blog-section-header">The Latest Posts</div>
-        <div class="blog-section-subtitle">Resources to style, compose, light, and edit food photography like a pro.</div>
-    
-        
-        <a href="blog-3.html" class="blog-post-link">
-          <div class="blog-post">
-            <img src="assets/blog-3/jewellery-photographer-chennai-cover.jpg" alt="Post Image 1">
-            <div class="blog-post-content">
-              <div class="blog-post-date">March 3, 2025</div>
-              <div class="blog-post-title">
-                4 Powerful Steps You Can Take When a Client Rejects Your Bid
-              </div>
-              <div class="blog-post-description">
-                Turn a client bid rejection into a future opportunity and open new doors for collaboration with these four actionable steps.
-              </div>
-              <span class="blog-read-more">Keep Reading</span>
+      <hr class="blog-divider">
+
+      <a href="blog-2.html" class="blog-post-link">
+        <div class="blog-post">
+          <img src="assets/blog/blog-2/medical-product-photography-chennai-karthi-palaniappan.jpg"
+            alt="Product photo shoot behind the scenes – photographed by professional product photographer Karthi Palaniappan in Chennai, India">
+          <div class="blog-post-content">
+            <div class="blog-post-date">June 06, 2025</div>
+            <div class="blog-post-title">
+              Shooting Clean & Creative Product Images: Behind the Scenes
             </div>
-          </div>
-        </a>
-    
-        <hr class="blog-divider">
-    
-        <a href="blog-2.html" class="blog-post-link">
-          <div class="blog-post">
-            <img src="assets/blog-2/medical-product-cover.jpg" alt="Post Image 2">
-            <div class="blog-post-content">
-              <div class="blog-post-date">May 20, 2025</div>
-              <div class="blog-post-title">
-                Shooting Clean & Creative Product Images: Behind the Scenes
-              </div>
-              <div class="blog-post-description">
-                What makes great product photography? For me, it's the blend of clean lighting, thoughtful preparation, 
-                and subtle post-production
-              </div>
-              <span class="blog-read-more">Keep Reading</span>
+            <div class="blog-post-description">
+              What makes great product photography? For me, it's the blend of clean lighting, thoughtful preparation,
+              and subtle post-production
             </div>
+            <span class="blog-read-more">Keep Reading</span>
           </div>
-        </a>
-    
-        <hr class="blog-divider">
-    
-        <a href="blog-1.html" class="blog-post-link">
-          <div class="blog-post">
-            <img src="assets/food/best-product-photographer-chennai-2.jpg" alt="Post Image 3">
-            <div class="blog-post-content">
-              <div class="blog-post-date">March 3, 2025</div>
-              <div class="blog-post-title">
-                4 Powerful Steps You Can Take When a Client Rejects Your Bid
-              </div>
-              <div class="blog-post-description">
-                Turn a client bid rejection into a future opportunity and open new doors for collaboration with these four actionable steps.
-              </div>
-              <span class="blog-read-more">Keep Reading</span>
+        </div>
+      </a>
+
+      <hr class="blog-divider">
+
+      <a href="blog-1.html" class="blog-post-link">
+        <div class="blog-post">
+          <img src="assets/blog/blog-1/hima-bindhu-portrait-shoot-chennai-karthi-palaniappan.jpg"
+            alt="Portrait shoot with Hima Bindhu - photographed by professional portrait photographer Karthi Palaniappan in Chennai, India">
+          <div class="blog-post-content">
+            <div class="blog-post-date">May 30, 2025</div>
+            <div class="blog-post-title">
+              Exploring Indoor and Outdoor Portraits in the Chennai Summer
             </div>
+            <div class="blog-post-description">
+              As a photographer based in Chennai, I’m always looking for ways to adapt my shoots to the
+              local climate. Summer here can be intensely hot, especially for outdoor sessions.
+            </div>
+            <span class="blog-read-more">Keep Reading</span>
           </div>
-        </a>
-    
-        <div class="blog-btn-container">
+        </div>
+      </a>
+
+      <!-- <div class="blog-btn-container">
           <button class="blog-btn-view-more">VIEW MORE POSTS</button>
-        </div>
-      </div>
+        </div> -->
+    </div>
 
-    </main>
+  </main>
 
-    <footer>
+  <footer>
     <div class="footer__bar">
       Copyright © 2025 Karthi Palaniappan. All rights reserved.
     </div>
-    </footer>
+  </footer>
 
-    <script src="main.js"></script>
-  </body>
+  <script src="main.js"></script>
+</body>
+
 </html>

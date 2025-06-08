@@ -324,7 +324,7 @@ body.inner .header {
 
 /* Full-screen header image only on homepage */
 body.home .header-image {
-  background: url('assets/header-1.jpg') center/cover no-repeat;
+  background: url('assets/header-sakshi-agarwal-black-saree-portrait-chennai-karthi-palaniappan.jpg') center/cover no-repeat;
   height: 100vh;
   position: relative;
   z-index: 0;
@@ -1122,8 +1122,6 @@ body.home .navbar {
   }
 }
 
-
-
 .blog-post img {
   width: 450px;
   height: 300px;
@@ -1139,16 +1137,6 @@ body.home .navbar {
 
 }
 
-/*.blog-post img:hover {
-  transform: none !important;
-  filter: none !important;
-  opacity: 1 !important;
-  transition: none !important;
-}*/
-
-
-
-
 .blog-image:hover {
   transform: none !important;
   box-shadow: none !important;
@@ -1156,9 +1144,6 @@ body.home .navbar {
   opacity: 1 !important;
   transition: none !important;
 }
-
-
-
 
 .blog-post-content {
   flex: 1;
@@ -1237,6 +1222,10 @@ body.home .navbar {
   text-transform: uppercase;
   color: var(--text-dark);
   text-align: center;
+}
+
+.blog-container h2{
+  margin-top: 20px;
 }
 
 .blog-container p {
